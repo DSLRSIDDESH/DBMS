@@ -2515,7 +2515,7 @@ SELECT cname,name FROM temps WHERE courseId in
 (SELECT courseId FROM course WHERE deptNo in (SELECT deptNo FROM course GROUP by deptNo)) 
 group by courseId) WHERE cid in (SELECT max(cid) 
 FROM(SELECT courseId, count(prereqcourse) AS cid FROM prerequisite WHERE courseId in 
-(SELECT courseId FROM course WHERE deptNo = 2) group by courseId) ));
+(SELECT courseId FROM course WHERE deptNo = 2) group by courseId)));
 
 -- Question-4
 -- Report faculty-wise average enrollments for course taught in all the

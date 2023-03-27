@@ -6,7 +6,6 @@ DROP TABLE t2_before;
 DROP TABLE t2;
 DROP TABLE eligible;
 
-
 CREATE TABLE course_taken(student_name varchar(20), course varchar(30));
 
 INSERT INTO course_taken VALUES('Robert', 'Databases');

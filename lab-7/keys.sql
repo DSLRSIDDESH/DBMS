@@ -91,7 +91,7 @@ ALTER TABLE orders2 ADD CONSTRAINT fk_salesman FOREIGN KEY (salesman_id) REFEREN
 -- 3.a. Display all the orders for the salesman who belongs to the same city and the individual
 -- commission of salesman is greater than the average commission of city.
 -- 3.a.
-SELECT * FROM orders2 WHERE salesman_id IN
+SELECT * FROM orders2 WHERE salesman_id IN 
 (SELECT s1.salesman_id FROM salesman s1, salesman s2 WHERE 
 s1.salesman_id != s2.salesman_id AND s1.city = s2.city AND 
 s1.commission > (select avg(commission) from salesman WHERE city = s1.city));

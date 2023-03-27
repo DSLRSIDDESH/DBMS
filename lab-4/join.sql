@@ -47,7 +47,7 @@ UNION
 SELECT prereqcourse FROM prerequisite where courseid in 
 (SELECT prereqcourse FROM prerequisite where courseid = '608'));
 
--- 4) 4.Find all the students who have not taken any course offered by the teachers of
+-- 4) Find all the students who have not taken any course offered by the teachers of
 -- course 319.
 
 SELECT distinct(student.rollno),student.name from student
@@ -57,7 +57,6 @@ INNER JOIN enrollment ON enrollment.rollno = student.rollno
 AND enrollment.courseid IN 
 (SELECT courseid from teaching where empid in 
 (SELECT empid from teaching where courseid = '319'));
-
 
 -- 5) Find roll no of students who have got S grade in all prerequisites of the course
 -- 760.

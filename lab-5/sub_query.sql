@@ -24,7 +24,7 @@ INSERT INTO agent VALUES('Ac004', 'Kamlesh', 'Ney Jersey', 0.68, '0331234564', N
 INSERT INTO agent VALUES('Ac005', 'Kartik', 'Chennai', 0.73, '0331234563', 'India');
 
 -- 1-a. Find ord_num, ord_amount, ord_date, cust_code and agent_code from the table Orders
--- working_area of Agent table must be Bangalore.
+-- working_area of Agent must be Bangalore.
 
 SELECT ord_num, ord_amount, ord_date, cust_code, agent_code FROM orders WHERE 
 agent_code IN (SELECT agent_code FROM agent where working_area = 'Bangalore');
